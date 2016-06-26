@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Styde.net | Curso de VueJS</title>
+	<title>codde.it | Curso de VueJS</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-
+	<link rel="stylesheet" href="mine.css">
     <script src="vue.js"></script>
 
     </head>
@@ -23,10 +23,10 @@
                 <p>Espero que disfrutes tu visita</p>
                 <p>Tu nombre al revés es: {{ name.split('').reverse().join('') }}
             </template>
-            <p v-else>Por favor escribe tu nombre:</p>
+            <p v-else>Por favor escribe tu nombre completo:</p>
 
             <form @submit="signUp(false, $event)">
-                <input type="text" v-model="name" class="form-control">
+                <input type="text" v-model="name" class="form-control"><br>
 
                 <p v-if="name == ''" class="alert alert-danger">
                     Este campo es obligatorio
@@ -72,7 +72,7 @@
         <p>¿Cuántos años de experiencia tienes con {{ tech }}?</p>
 
         <p>
-            Respuesta: <strong>{{ years }}</strong>
+            Respuesta: <strong>{{ years }}</strong>&nbsp;
 
             <button type="button"
                     class="btn"
