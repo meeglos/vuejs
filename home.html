@@ -5,16 +5,82 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title></title>
+        <title>..::. learning Sass ..::..</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-		<link rel="stylesheet" href="mine.css">
-	    <script src="vue.js"></script>
+		<link rel="stylesheet" href="css/mine.css">
+	    <script src="js/vue.js"></script>
     </head>
     <body>
-      <h1>Hello, Vue!</h1>
+      
+		<header>
+			<div class="container-fluid top">
+				<h2>info database demo</h2>
+				<p>Main description of this app</p>
+			</div>
+		</header>
+		<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+		<div class="row">
+			<div class="col-xs-6 col-md-4">
+				<section id="navigation">
+					<ul class="menu">
+						<li><a href="#">Fijos</a></li>
+						<li><a href="#">Móviles</a></li>
+						<li><a href="#">Internet</a></li>
+						<li><a href="#">Television</a></li>
+						<li><a href="#">Correos</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<section id="container">
+					<input type="text" placeholder="Ingrese búsqueda">
+					<button class="btn btn-primary">buscar</button>
+					<div id="results">
+						<!-- esto se repite muchas veces, tantas como resultados tengamos -->
+						<div class="accordion" id="accordion2">
+						  <div class="accordion-group">
+						    <div class="accordion-heading">
+						      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+						        Cabecera de resultado numero 1
+						      </a>
+						    </div>
+						    <div id="collapseOne" class="accordion-body collapse in">
+						      <div class="accordion-inner">
+						        Contenido detalle del resultado numero 1
+						      </div>
+						    </div>
+						  </div>
+					  	</div>
+						<!-- esto se repite muchas veces, tantas como resultados tengamos -->
+					  </div>
+					</div>
+				</section>				
+			</div>
+			<div class="col-xs-6 col-md-4">
+				<aside>
+					<h3>Búsquedas mas populares</h3>
+					<button class="btn btn-primary" type="button">
+					  Móviles <span class="badge">2</span>
+					</button>
+					<button class="btn btn-info" type="button">
+					  Internet <span class="badge">4</span>
+					</button>
+					<button class="btn btn-warning" type="button">
+					  Internet <span class="badge">4</span>
+					</button>
+				</aside>
+			</div>
+		</div>
 
-      <script>
-      </script>
+		<footer>
+			<div class="container-fluid">
+				<div class="row">
+					<h2>This is the footer</h2>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eaque quia incidunt illo, recusandae dignissimos, ea sunt, animi consectetur iure voluptate perferendis vitae veniam! Excepturi sapiente odit asperiores, consequuntur mollitia.</p>
+				</div>
+			</div>
+		</footer>
+
     </body>
 </html>
