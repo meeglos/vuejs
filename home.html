@@ -10,77 +10,187 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/mine.css">
 	    <script src="js/vue.js"></script>
+	    <script src="js/mine.js"></script>
     </head>
     <body>
       
 		<header>
-			<div class="container-fluid top">
-				<h2>info database demo</h2>
-				<p>Main description of this app</p>
-			</div>
-		</header>
-		<!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
-		<div class="row">
-			<div class="col-xs-6 col-md-4">
-				<section id="navigation">
-					<ul class="menu">
-						<li><a href="#">Fijos</a></li>
-						<li><a href="#">Móviles</a></li>
-						<li><a href="#">Internet</a></li>
-						<li><a href="#">Television</a></li>
-						<li><a href="#">Correos</a></li>
-					</ul>
-				</section>
-			</div>
-			<div class="col-xs-6 col-md-4">
-				<section id="container">
-					<input type="text" placeholder="Ingrese búsqueda">
-					<button class="btn btn-primary">buscar</button>
-					<div id="results">
-						<!-- esto se repite muchas veces, tantas como resultados tengamos -->
-						<div class="accordion" id="accordion2">
-						  <div class="accordion-group">
-						    <div class="accordion-heading">
-						      <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
-						        Cabecera de resultado numero 1
-						      </a>
-						    </div>
-						    <div id="collapseOne" class="accordion-body collapse in">
-						      <div class="accordion-inner">
-						        Contenido detalle del resultado numero 1
-						      </div>
-						    </div>
-						  </div>
-					  	</div>
-						<!-- esto se repite muchas veces, tantas como resultados tengamos -->
-					  </div>
+			<nav class="navbar navbar-default navbar-fixed-top top">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						</button>
+						<a class="navbar-brand" href="#">Ayuda PYMES</a>
 					</div>
-				</section>				
-			</div>
-			<div class="col-xs-6 col-md-4">
-				<aside>
-					<h3>Búsquedas mas populares</h3>
-					<button class="btn btn-primary" type="button">
-					  Móviles <span class="badge">2</span>
-					</button>
-					<button class="btn btn-info" type="button">
-					  Internet <span class="badge">4</span>
-					</button>
-					<button class="btn btn-warning" type="button">
-					  Internet <span class="badge">4</span>
-					</button>
-				</aside>
-			</div>
-		</div>
-
-		<footer>
-			<div class="container-fluid">
-				<div class="row">
-					<h2>This is the footer</h2>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id eaque quia incidunt illo, recusandae dignissimos, ea sunt, animi consectetur iure voluptate perferendis vitae veniam! Excepturi sapiente odit asperiores, consequuntur mollitia.</p>
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav navbar-right">
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Fijo <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Fibra</a></li>
+									<li><a href="#">Cable</a></li>
+									<li><a href="#">ULL</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Internet <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Fibra</a></li>
+									<li><a href="#">Cable</a></li>
+									<li><a href="#">ULL</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Televisión <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Fibra</a></li>
+									<li><a href="#">Cable</a></li>
+									<li><a href="#">DTV</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Servicios internet <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">Correos</a></li>
+									<li><a href="#">Dominios</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Móviles <span class="caret"></span></a>
+								<ul class="dropdown-menu">
+									<li><a href="#">ONO</a></li>
+									<li><a href="#">Vodafone</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div><!--/.nav-collapse -->
 				</div>
-			</div>
-		</footer>
+		    </nav>
+		</header>
+		<div class="container top-space">
 
+		      <div class="row">
+
+		        <div class="col-sm-8">
+					<br>
+		          <form>
+		            <div class="form-group">
+		              <!-- <label for="searchItem">ctrl + shift + p</label> -->
+		              <input type="text" class="form-control buscar" id="searchItem" placeholder="Buscar...">
+		            </div>
+		        
+
+		        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+		          <div class="panel panel-default">
+		            <div class="panel-heading" role="tab" id="headingOne">
+		              <h4 class="panel-title">
+		                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+		                  Collapsible Group Item #1
+		                </a>
+		              </h4>
+		            </div>
+		            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+		              <div class="panel-body">
+		                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		              </div>
+		            </div>
+		          </div>
+		          <div class="panel panel-default">
+		            <div class="panel-heading" role="tab" id="headingTwo">
+		              <h4 class="panel-title">
+		                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+		                  Collapsible Group Item #2
+		                </a>
+		              </h4>
+		            </div>
+		            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+		              <div class="panel-body">
+		                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+		              </div>
+		            </div>
+		          </div>
+		          <div class="panel panel-default">
+		            <div class="panel-heading" role="tab" id="headingThree">
+		              <h4 class="panel-title">
+		                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+		                  Collapsible Group Item #3
+		                </a>
+		              </h4>
+		            </div>
+		            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+		              <div class="panel-body">
+		                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt voluptatum saepe dolores a consequuntur porro, alias doloribus libero error, debitis hic aspernatur deserunt facere veniam magni magnam corporis non, tempore.</div>
+		                <div>Repudiandae fugit, voluptates, ex ratione voluptatum debitis animi magnam. Voluptas eos recusandae perferendis quaerat corporis animi ipsam commodi deserunt totam, minus voluptates pariatur atque quibusdam, fugiat laudantium aut tempora, aperiam.</div>
+		                <div>Molestias nisi illum sed excepturi dicta quasi omnis obcaecati tempora est rerum earum voluptate dolorum maxime quibusdam officia praesentium ea, modi ex minus, quis odio aspernatur tenetur in delectus. Aliquid.</div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		        </div><!-- /.blog-main -->
+
+		        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+		          <div class="sidebar-module sidebar-module-inset">
+		            <h4>Info</h4>
+		            <p>Es una versión <em>beta</em> y resumida de las clasificaciones de averias y peticiones. No reemplaza a las guías.</p>
+		          </div>
+		          <br>
+		          <div class="sidebar-module">
+		            <h4>Últimos cambios</h4>
+		            <ol class="list-unstyled">
+						<li><button class="btn btn-primary distance left" type="button">
+							Móviles<span class="badge right">hace 4 dias</span></button></li>
+						<li><button class="btn btn-warning distance left" type="button">
+							Fijo<span class="badge right">hace 3 semanas</span></button></li>
+						<li><button class="btn btn-info distance left" type="button">
+							Televisión<span class="badge right">hace 3 meses</span></button></li>
+		            </ol>
+		          </div>
+		          <div class="sidebar-module">
+		            <h4>Más buscados</h4>
+		            <ul class="list-group">
+		              <li class="list-group-item">
+		              	<span class="badge">9864</span>
+		                	Móviles
+		              </li>
+		              <li class="list-group-item">
+		              	<span class="badge">7543</span>
+		                	Fijos
+		              </li>
+		              <li class="list-group-item">
+		              	<span class="badge">4828</span>
+		                	Internet
+		              </li>
+		              <li class="list-group-item">
+		              	<span class="badge">3725</span>
+		                	Televisión
+		              </li>
+		              <li class="list-group-item">
+		              	<span class="badge">1519</span>
+		                	Dominios
+		              </li>
+		              <li class="list-group-item">
+		              	<span class="badge">371</span>
+		                	Correos
+		              </li>
+		            </ul>
+		          </div>
+		        </div><!-- /.blog-sidebar -->
+
+		      </div><!-- /.row -->
+
+		    </div>
+
+
+	    <footer class="blog-footer">
+			<p>Powered by <a href="#">codde.it</a></p>
+			<p>Colors by <a href="http://www.colourlovers.com/lover/electrikmonk">electrikmonk</a> @ <a href="http://www.colourlovers.com">colourlovers</a></p>
+			<p><a href="#">Back to top</a></p>
+        </footer>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
     </body>
 </html>
